@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Character Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title"><strong>{{ character.name }}</strong></span>
+
+    {% if character.movie_format %}
+    <p>Movie character</p>
+    {% else %}
+    <p>TV character</p>
+    {% endif %}
+    <p>{{ character.media_name }}</p>
+    <p><b>Year Created: </b>{{ character.year_created }}</p>
+
+    <br />
+    <p><b>Description: </b>{{ character.description }}</p>
+    <p><b>Role: </b>{{ character.role }}</p>
+    <p><b>Main goal: </b>{{ character.goal }}</p>
+    <p><b>Obstacle: </b>{{ character.obstacle }}</p>
+  </div>
+</div>
+{% endblock %}

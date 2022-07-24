@@ -3,21 +3,11 @@
 <h1>Character List</h1>
 
 {% for character in characters %}
-<div class="card">
-  <div class="card-content">
-    <span class="card-title">{{ character.name }}</span>
-
-    <p>Movie/TV Show: {{ character.media_name }}</p>
-    <p>Description: {{ character.description }}</p>
-    <p>Role: {{ character.role }}</p>
-    <p>Main goal: {{ character.goal }}</p>
-    <p>Obstacle: {{ character.obstacle }}</p>
-
-    {% if character.movie_format %}
-    <p>Movie character</p>
-    {% else %}
-    <p>TV character</p>
-    {% endif %}
+<a href="{% url 'detail' character.id %}">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ character.name }}</span>
+    </div>
   </div>
-</div>
+</a>
 {% endfor %} {% endblock %}
