@@ -20,5 +20,9 @@
     <p><b>Main goal: </b>{{ character.goal }}</p>
     <p><b>Obstacle: </b>{{ character.obstacle }}</p>
   </div>
+  <div class="card-action">
+    <a href="{% url 'characters_update' character.id %}">Edit</a>
+    <a href="{% url 'characters_delete' character.id %}">Delete</a>
+  </div>
 </div>
 {% endblock %}

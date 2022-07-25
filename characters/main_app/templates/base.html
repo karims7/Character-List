@@ -28,8 +28,9 @@
             </li>
           </ul>
           <ul class="right">
-            <li><a href="/about">About</a></li>
-            <li><a href="/characters">View characters</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'characters_create' %}">Add Character</a></li>
+            <li><a href="{% url 'index' %}">View Characters</a></li>
           </ul>
         </div>
       </nav>
